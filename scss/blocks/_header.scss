@@ -1,0 +1,469 @@
+@use "../mixins" as m;
+
+/* work-sans-100 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/work-sans-v19-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-200 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/work-sans-v19-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/work-sans-v19-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/work-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/work-sans-v19-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/work-sans-v19-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/work-sans-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/work-sans-v19-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-900 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/work-sans-v19-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.hero {
+    background: var(--Color-Green-100, #74c69d);
+}
+// site__header part started
+.site__header {
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    @include m.unStyleList;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header__link {
+    display: inline-block;
+    color: var(--Color-White-100, #fff);
+    text-align: right;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    text-decoration: none;
+}
+
+.header__button {
+    display: none;
+}
+
+// site__header part finished
+// site-header responsive for 320px started
+@media only screen and (min-width: 320px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__button {
+        display: block;
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+}
+// site-header responsive for 320px finished
+
+// site__header responsive for 700px started
+@media only screen and (min-width: 700px) {
+    .site__header {
+        padding-top: 35px;
+        padding-bottom: 40px;
+    }
+    .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .header__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        @include m.unStyleList;
+    }
+
+    .header__nav {
+        display: block;
+    }
+
+    .header__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .header__link {
+        display: inline-block;
+        color: var(--Color-White-100, #fff);
+        text-align: right;
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+
+        /* Typography/Sub-Heading/Regular */
+        font-family: "Work Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 25px */
+        text-decoration: none;
+    }
+
+    .header__button {
+        display: none;
+    }
+}
+// site__header responsive for 700px finished
+
+// welcome__section part started
+.welcome__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.welcome__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    @include m.unStyleList;
+}
+
+.welcome__item__info-box {
+    width: 113px;
+    min-height: 20px;
+}
+
+.welcome__item-info {
+    color: var(--Text_White, #fff);
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 15px;
+    /* Typography / Label / Bold */
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 20px */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.welcome__item-title {
+    color: var(--Text_White, #fff);
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 15px;
+    /* Typography/Heading/Bold 1 */
+    font-family: "Crimson Text";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 50px */
+}
+
+.welcome__item-desc-box {
+    width: 416px;
+    min-height: 76px;
+    color: var(--Color-White-75, rgba(255, 255, 255, 0.75));
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-bottom: 15px;
+    /* Typography/Body/Regular */
+    font-family: "Work Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 18.75px */
+}
+
+.welcome__item-desc {
+    color: var(--Color-White-75, rgba(255, 255, 255, 0.75));
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 25px;
+    /* Typography/Body/Regular */
+    font-family: "Work Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 18.75px */
+}
+
+.welcome__item-box {
+    width: 170px;
+    min-height: 48px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #fff;
+    display: inline-block;
+    padding-top: 13px;
+    padding-left: 48px;
+    padding-bottom: 10px;
+    padding-right: 47px;
+}
+
+.welcome__item-link {
+    color: #000;
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    text-decoration: none;
+}
+
+.welcome__item-image {
+    width: 644px;
+    height: 378px;
+    background-image: url("../images/idie.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 644px 378px;
+}
+// welcome__section part finished
+
+// welcome__section repsonsive for 320px is started
+@media only screen and (min-width: 320px) {
+    .welcome__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .welcome__item-image {
+        margin-bottom: 30px;
+        width: 335px;
+        height: 196px;
+        background-size: 335px 196px;
+    }
+
+    .welcome__item-title {
+        width: 300px;
+        min-height: 70px;
+        margin: 0 auto;
+    }
+
+    .welcome__item-desc-box {
+        width: 300px;
+        min-height: 95px;
+        margin: 0 auto;
+    }
+}
+// welcome__section repsonsive for 320px is finished
+
+// welcome__section responsive for 700px is started
+@media only screen and (min-width: 700px) {
+    .welcome__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .welcome__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        @include m.unStyleList;
+    }
+
+    .welcome__item__info-box {
+        width: 113px;
+        min-height: 20px;
+    }
+
+    .welcome__item-info {
+        color: var(--Text_White, #fff);
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-top: 0;
+        margin-bottom: 15px;
+        /* Typography / Label / Bold */
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 20px */
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .welcome__item-title {
+        width: 416px;
+        color: var(--Text_White, #fff);
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin: 0;
+        margin-top: 0;
+        margin-bottom: 15px;
+        /* Typography/Heading/Bold 1 */
+        font-family: "Crimson Text";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 50px */
+    }
+
+    .welcome__item-desc-box {
+        width: 416px;
+        min-height: 76px;
+        color: var(--Color-White-75, rgba(255, 255, 255, 0.75));
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-bottom: 15px;
+        /* Typography/Body/Regular */
+        font-family: "Work Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 18.75px */
+    }
+
+    .welcome__item-desc {
+        color: var(--Color-White-75, rgba(255, 255, 255, 0.75));
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-top: 0;
+        margin-bottom: 25px;
+        /* Typography/Body/Regular */
+        font-family: "Work Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 18.75px */
+    }
+
+    .welcome__item-box {
+        width: 170px;
+        min-height: 48px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: #fff;
+        display: inline-block;
+        padding-top: 13px;
+        padding-left: 48px;
+        padding-bottom: 10px;
+        padding-right: 47px;
+    }
+
+    .welcome__item-link {
+        color: #000;
+        text-align: center;
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        /* Typography/Sub-Heading/Regular */
+        font-family: "Work Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 25px */
+        text-decoration: none;
+    }
+
+    .welcome__item-image {
+        width: 644px;
+        height: 378px;
+        background-image: url("../images/idie.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 644px 378px;
+    }
+}
+// welcome__section responsive for 700px is finished

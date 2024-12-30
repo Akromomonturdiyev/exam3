@@ -1,0 +1,703 @@
+@use "../mixins" as m;
+
+// lorem__section part started
+.lorem__section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.lorem__info-box {
+    width: 121px;
+    height: 20px;
+}
+
+.lorem__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: var(--Color-Green-100, #74c69d);
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* Typography / Label / Bold */
+    font-family: "Work Sans";
+    font-size: 16px;
+    // margin: 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 20px */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.lorem__first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lorem__title {
+    width: 341px;
+    min-height: 50px;
+    color: var(--Text_Black, #000);
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 16px;
+    /* Typography/Heading/Bold 1 */
+    font-family: "Crimson Text";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 50px */
+}
+
+.lorem__desc-box {
+    width: 411px;
+    min-height: 60px;
+    color: var(--Text_Black, #000);
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+}
+
+.lorem__desc {
+    color: var(--Text_Black, #000);
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+}
+
+.lorem__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 68px;
+    margin-bottom: 55px;
+}
+
+.learn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 170px;
+    min-height: 48px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    padding: 13px 29px 10px 29px;
+    background: var(--color-dark, #212529);
+    margin: 0 auto;
+}
+
+.lorem__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include m(unStyleList);
+}
+
+.learn__link {
+    color: #fff;
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    text-decoration: none;
+}
+// lorem__section part finished
+
+// lorem__section responsive part started
+@media only screen and (min-width: 320px) {
+    .lorem__section {
+        width: 100%;
+    }
+
+    .lorem__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .lorem__first {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .lorem__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+// lorem__section responsive part finished
+
+// lists__section part started
+.lists__section {
+    padding-bottom: 102px;
+}
+
+.lists__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lists__list {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    @include m.unStyleList;
+    margin-bottom: 73px;
+}
+
+.lists__image-item {
+    width: 600px;
+    height: 431px;
+    display: inline-block;
+    background-image: url("../images/find.png");
+    background-size: 600px 431px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lists__image-item-first {
+    width: 600px;
+    height: 565px;
+    display: inline-block;
+    background-image: url("../images/work.png");
+    background-size: 600px 565px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lists__title {
+    width: 462px;
+    min-height: 100px;
+    color: var(--Color-Dark-100, #212529);
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 16px;
+    /* Typography/Heading/Bold 1 */
+    font-family: "Crimson Text";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 50px */
+}
+
+.lists__info {
+    width: 470px;
+    min-height: 75px;
+    display: inline-block;
+    color: var(--Color-Dark-50, rgba(33, 37, 41, 0.5));
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 16px;
+    /* Typography/Body/Regular */
+    font-family: "Work Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 18.75px */
+}
+
+.lists__link-box {
+    display: block;
+    width: 170px;
+    min-height: 48px;
+    flex-shrink: 0;
+    padding: 13px 29px 10px 29px;
+    border-radius: 5px;
+    background: var(--color-dark, #212529);
+}
+
+.lists__link {
+    color: #fff;
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    text-decoration: none;
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+}
+
+// lists__section part finished
+
+// lists__section responsive part started
+@media only screen and (min-width: 320px) {
+    .lists__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .lists__title {
+        width: 300px;
+        min-height: 60px;
+    }
+
+    .lists__info {
+        width: 300px;
+        min-height: 94px;
+    }
+
+    .lists__image-item {
+        width: 300px;
+        background-size: 300px;
+    }
+    .lists__image-item-first {
+        width: 300px;
+        background-size: 300px;
+    }
+}
+// lists__section responsive part finished
+
+// lists__section responsive 700ox part started
+@media only screen and (min-width: 700px) {
+    .lists__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .lists__list {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        @include m.unStyleList;
+        margin-bottom: 73px;
+    }
+
+    .lists__image-item {
+        width: 600px;
+        height: 431px;
+        display: inline-block;
+        background-image: url("../images/find.png");
+        background-size: 600px 431px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .lists__image-item-first {
+        width: 600px;
+        height: 565px;
+        display: inline-block;
+        background-image: url("../images/work.png");
+        background-size: 600px 565px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .lists__title {
+        width: 462px;
+        min-height: 100px;
+        color: var(--Color-Dark-100, #212529);
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-top: 0;
+        margin-bottom: 16px;
+        /* Typography/Heading/Bold 1 */
+        font-family: "Crimson Text";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 50px */
+    }
+
+    .lists__info {
+        width: 470px;
+        min-height: 75px;
+        display: inline-block;
+        color: var(--Color-Dark-50, rgba(33, 37, 41, 0.5));
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-top: 0;
+        margin-bottom: 16px;
+        /* Typography/Body/Regular */
+        font-family: "Work Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 18.75px */
+    }
+
+    .lists__link-box {
+        display: block;
+        width: 170px;
+        min-height: 48px;
+        flex-shrink: 0;
+        padding: 13px 29px 10px 29px;
+        border-radius: 5px;
+        background: var(--color-dark, #212529);
+    }
+
+    .lists__link {
+        color: #fff;
+        text-align: center;
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        text-decoration: none;
+        /* Typography/Sub-Heading/Regular */
+        font-family: "Work Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 25px */
+    }
+}
+// lists__section responsive 700ox part finished
+
+// team__section part started
+.team__section {
+    padding-bottom: 54px;
+}
+
+.team__info {
+    color: var(--Color-Green-100, #74c69d);
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 16px;
+    /* Typography / Label / Bold */
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 20px */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.team__title {
+    color: var(--Color-Dark-100, #212529);
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 16px;
+    /* Typography/Heading/Bold 1 */
+    font-family: "Crimson Text";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 50px */
+}
+
+.team__desc {
+    color: var(--Text_Black, #000);
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+}
+
+.team__first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 45px;
+}
+
+.team__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    @include m.unStyleList;
+}
+
+.team__item-title {
+    color: var(--color-dark, #212529);
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+    margin-bottom: 17px;
+    /* Typography / Heading / Bold 4 */
+    font-family: "Crimson Text";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 30px */
+}
+.team__item {
+    width: 279px;
+    min-height: 299px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+}
+
+.team__item-info {
+    width: 202px;
+    color: var(--Color-Dark-75, rgba(33, 37, 41, 0.75));
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+
+    /* Typography/Body/Regular */
+    font-family: "Work Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 18.75px */
+}
+
+.team__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 170px;
+    min-height: 48px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--color-dark, #212529);
+}
+
+.team__link {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-feature-settings:
+        "liga" off,
+        "clig" off;
+
+    /* Typography/Sub-Heading/Regular */
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+}
+// team__section part finished
+// team__section responsive started
+@media only screen and (min-width: 320px) {
+    .team__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .team__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .team__item {
+        margin-bottom: 35px;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .team__section {
+        padding-bottom: 54px;
+    }
+
+    .team__info {
+        color: var(--Color-Green-100, #74c69d);
+        text-align: center;
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-top: 0;
+        margin-bottom: 16px;
+        /* Typography / Label / Bold */
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 20px */
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .team__title {
+        color: var(--Color-Dark-100, #212529);
+        text-align: center;
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-top: 0;
+        margin-bottom: 16px;
+        /* Typography/Heading/Bold 1 */
+        font-family: "Crimson Text";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 50px */
+    }
+
+    .team__desc {
+        color: var(--Text_Black, #000);
+        text-align: center;
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-top: 0;
+        margin-bottom: 0;
+        /* Typography/Sub-Heading/Regular */
+        font-family: "Work Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 25px */
+    }
+
+    .team__first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+
+    .team__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 47px;
+        @include m.unStyleList;
+    }
+
+    .team__item-title {
+        color: var(--color-dark, #212529);
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        margin-bottom: 17px;
+        /* Typography / Heading / Bold 4 */
+        font-family: "Crimson Text";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 30px */
+    }
+    .team__item {
+        width: 279px;
+        min-height: 299px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+    }
+
+    .team__item-info {
+        width: 202px;
+        color: var(--Color-Dark-75, rgba(33, 37, 41, 0.75));
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+
+        /* Typography/Body/Regular */
+        font-family: "Work Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 18.75px */
+    }
+
+    .team__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 170px;
+        min-height: 48px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: var(--color-dark, #212529);
+    }
+
+    .team__link {
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-feature-settings:
+            "liga" off,
+            "clig" off;
+        
+
+        /* Typography/Sub-Heading/Regular */
+        font-family: "Work Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 25px */
+    }
+}
+// team__section responsive finished
